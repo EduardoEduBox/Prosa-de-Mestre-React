@@ -1,0 +1,121 @@
+@import url("https://fonts.googleapis.com/css2?family=Outfit&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Base Styles */
+html {
+  color-scheme: dark;
+  scroll-behavior: smooth;
+}
+
+body {
+  overflow-x: hidden !important;
+  font-family: "Outfit", sans-serif;
+  background-color: #1c1c1c;
+}
+
+/* Glow Effects */
+.glow-green {
+  filter: drop-shadow(0 0 10px rgba(0,255,0,.25));
+}
+
+.glow-yellow {
+  filter: drop-shadow(0 0 10px rgba(255,255,0,.25));
+}
+
+/* Flickity Custom Styles */
+/* General Button Styles */
+.flickity-button {
+  position: absolute;
+  top: 40%;
+  opacity: 50%;
+}
+
+/* Previous & Next Button Sizes */
+.flickity-prev-next-button {
+  width: 40px;
+  height: 40px;
+}
+
+/* Disabled Button Style */
+.flickity-button:disabled {
+  display: none;
+}
+
+/* Icon Color */
+.flickity-button-icon {
+  fill: black;
+}
+
+/* Dot Styles */
+.flickity-page-dots {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  bottom: 0px;
+}
+
+.flickity-page-dots .dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 5000vh;
+  background-color: black;
+  opacity: 50%;
+}
+
+/* Selected Dot */
+.flickity-page-dots .dot.is-selected {
+  background: black;
+  opacity: 100%;
+}
+
+/* Scrollbar Styles */
+::-webkit-scrollbar {
+  width: .3rem;
+  height: 1.7vh;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+  border-radius: 1vw;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 1vh;
+  width: 5vw;
+  background: gray;
+}
+
+/* Hide reCAPTCHA Badge */
+.grecaptcha-badge, .grecaptcha-logo *{
+  display: none;
+  box-shadow: none !important;
+}
+
+/* Media Queries */
+@media (min-width: 1024px) {
+  .flickity-prev-next-button {
+    width: 60px;
+    height: 60px;
+    top: 55%;
+  }
+
+  .flickity-prev-next-button.previous {
+    left: 2rem;
+  }
+
+  .flickity-prev-next-button.next {
+    right: calc(50% + 2rem);
+  }
+
+  .flickity-page-dots {
+    margin-top: 1rem;
+  }
+
+  .flickity-page-dots .dot {
+    width: 18px !important;
+    height: 18px !important;
+  }
+}
