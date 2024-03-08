@@ -110,7 +110,7 @@ const Advertise: React.FC = () => {
   return (
     <section
       className="flex flex-col items-center w-full px-3 py-8 overflow-x-hidden text-center lg:py-16 lg:px-14 lg:flex-row"
-      id="advertise"
+      id="anuncie"
     >
       <div className="lg:w-1/2">
         <h1 className="text-3xl font-semibold text-custom-orange lg:text-6xl lg:mb-10">

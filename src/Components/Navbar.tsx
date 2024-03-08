@@ -41,7 +41,7 @@ const Navbar: React.FC = () => {
                 <a href="#aboutMe" className={desktopMenuLinkClasses}>
                   Sobre mim
                 </a>
-                <a href="#advertise" className={desktopMenuLinkClasses}>
+                <a href="#anuncie" className={desktopMenuLinkClasses}>
                   Anuncie
                 </a>
                 <a href="#products" className={desktopMenuLinkClasses}>
@@ -116,7 +116,7 @@ const Navbar: React.FC = () => {
               </a>
               <hr className="w-11/12 mr-2 bg-white" />
               <a
-                href="#advertise"
+                href="#anuncie"
                 onClick={() => setIsOpen(false)}
                 className={mobileMenuLinkClasses}
               >

@@ -14,8 +14,9 @@ const App: React.FC = () => {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    window.onload = () => setLoading(false);
-    console.log("App loaded");
+    setTimeout(() => {
+      setLoading(false);
+    }, 5000);
   }, []);
 
   return (

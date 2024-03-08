@@ -4,7 +4,7 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Base Styles */
+
 html {
   color-scheme: dark;
   scroll-behavior: smooth;
@@ -12,11 +12,14 @@ html {
 
 body {
   overflow-x: hidden !important;
-  font-family: "Outfit", sans-serif;
+  font-family: "Outfit";
   background-color: #1c1c1c;
 }
 
-/* Glow Effects */
+/* * {
+  border: solid 1px lightgray
+} */
+
 .glow-green {
   filter: drop-shadow(0 0 10px rgba(0,255,0,.25));
 }
@@ -25,38 +28,69 @@ body {
   filter: drop-shadow(0 0 10px rgba(255,255,0,.25));
 }
 
-/* Flickity Custom Styles */
-/* General Button Styles */
+/* buttons */
+/* no circle */
 .flickity-button {
   position: absolute;
   top: 40%;
   opacity: 50%;
 }
-
-/* Previous & Next Button Sizes */
+/* big previous & next buttons */
 .flickity-prev-next-button {
   width: 40px;
   height: 40px;
 }
-
-/* Disabled Button Style */
+/* icon color */
+.flickity-button-icon {
+  fill: black;
+}
+/* hide disabled button */
 .flickity-button:disabled {
   display: none;
 }
 
-/* Icon Color */
-.flickity-button-icon {
-  fill: black;
+/* position outside */
+.flickity-prev-next-button.previous {
+  left: 1rem;
+}
+.flickity-prev-next-button.next {
+  right: 1rem;
 }
 
-/* Dot Styles */
+/* media query for desktop */
+
+@media (min-width: 1024px) {
+  .flickity-prev-next-button {
+    width: 60px;
+    height: 60px;
+
+    top: 55%;
+  }
+  
+  .flickity-prev-next-button.previous {
+    left: 2rem;
+  }
+
+  .flickity-prev-next-button.next {
+    right: calc(50% + 2rem);
+}
+.flickity-page-dots {
+  margin-top: 1rem;
+}
+.flickity-page-dots .dot {
+  width: 18px !important;
+  height: 18px !important;
+}
+
+}
+/* position dots in gallery */
 .flickity-page-dots {
   display: flex;
   gap: 10px;
   justify-content: center;
   bottom: 0px;
 }
-
+/* white circles */
 .flickity-page-dots .dot {
   width: 12px;
   height: 12px;
@@ -64,58 +98,29 @@ body {
   background-color: black;
   opacity: 50%;
 }
-
-/* Selected Dot */
+/* fill-in selected dot */
 .flickity-page-dots .dot.is-selected {
   background: black;
   opacity: 100%;
 }
 
-/* Scrollbar Styles */
 ::-webkit-scrollbar {
   width: .3rem;
   height: 1.7vh;
 }
-
 ::-webkit-scrollbar-track {
   background: transparent;
   border-radius: 1vw;
 }
-
 ::-webkit-scrollbar-thumb {
   border-radius: 1vh;
   width: 5vw;
+}
+::-webkit-scrollbar-thumb {
   background: gray;
 }
 
-/* Hide reCAPTCHA Badge */
 .grecaptcha-badge, .grecaptcha-logo *{
   display: none;
   box-shadow: none !important;
-}
-
-/* Media Queries */
-@media (min-width: 1024px) {
-  .flickity-prev-next-button {
-    width: 60px;
-    height: 60px;
-    top: 55%;
-  }
-
-  .flickity-prev-next-button.previous {
-    left: 2rem;
-  }
-
-  .flickity-prev-next-button.next {
-    right: calc(50% + 2rem);
-  }
-
-  .flickity-page-dots {
-    margin-top: 1rem;
-  }
-
-  .flickity-page-dots .dot {
-    width: 18px !important;
-    height: 18px !important;
-  }
 }
